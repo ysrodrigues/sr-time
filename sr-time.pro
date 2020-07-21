@@ -4,4 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        main.cc
+        main.cc \
+        timer.cc
+
+HEADERS += \
+    timer.h

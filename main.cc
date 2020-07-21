@@ -1,9 +1,20 @@
-#include <iostream>
+#include <cstdlib>
 
-using namespace std;
+#include "timer.h"
 
-int main()
-{
-    cout << "Hello World!" << endl;
-    return 0;
+int main() {
+  Timer* timer;
+
+  timer = new Timer();
+  timer->start();
+
+  for (long i = 0; i < 10000000000; ++i) continue;
+
+  timer->stop();
+
+  timer->print();
+
+  delete timer;
+
+  return EXIT_SUCCESS;
 }
